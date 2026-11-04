@@ -1,14 +1,10 @@
-:root{
+:root {
     --bg-primary: midnightblue;
     --bg-card: darkslateblue;
-    --bg-input: midnightblue;
-
     --accent-blue: dodgerblue;
     --accent-hover: royalblue;
-
     --text-primary: white;
     --text-secondary: lightgrey;
-
     --border-color: slateblue;
 }
 
@@ -19,15 +15,15 @@
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
-body {
-    background-color: var(--bg-main);
+.page-wrapper {
+    background-color: var(--bg-primary);
     color: var(--text-primary);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-header{
+header {
     background-color: var(--bg-card);
     border-bottom: 2px solid var(--border-color);
     padding: 1rem 2rem;
@@ -57,15 +53,15 @@ nav a {
 }
 
 nav a:hover,
-nav a.active{
+nav a.active {
     color: var(--accent-blue);
 }
 
-.container{
+.container {
     max-width: 1000px;
     width: 100%;
     margin: 2rem auto;
-    padding: 0 1 rem;
+    padding: 0 1rem;
     flex: 1;
 }
 
@@ -78,29 +74,29 @@ nav a.active{
     margin-bottom: 2rem;
 }
 
-.hero-card h1{
+.hero-card h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--accent-blue);
 }
 
-.hero-card .tagline{
+.hero-card .tagline {
     color: var(--text-secondary);
-    font-size: 1.1 rem;
+    font-size: 1.1rem;
     max-width: 650px;
     margin: 0 auto 2rem auto;
     line-height: 1.6;
 }
 
-.cta-group{
+.cta-group {
     display: flex;
     gap: 1rem;
     justify-content: center;
 }
 
-.features-grid{
+.features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
 }
 
@@ -109,9 +105,14 @@ nav a.active{
     border: 2px solid var(--border-color);
     border-radius: 12px;
     padding: 1.5rem;
+    transition: transform 0.2s ease;
 }
 
-.card-icon{
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card-icon {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
@@ -121,15 +122,34 @@ nav a.active{
     color: var(--text-primary);
 }
 
-.card p{
+.card p {
     color: var(--text-secondary);
     font-size: 0.95rem;
     line-height: 1.5;
 }
 
-.btn{
+/* Planner task card specific styles */
+.task-card {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Strike through text when task checkbox is checked */
+.task-checkbox:checked + div h3 {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.btn {
     background-color: var(--accent-blue);
-    color: var(--text-primary);
+    color: white;
     padding: 0.75rem 1.25rem;
     border: none;
     border-radius: 6px;
@@ -140,22 +160,22 @@ nav a.active{
     display: inline-block;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--accent-hover);
 }
 
-.btn-secondary{
+.btn-secondary {
     background-color: transparent;
     border: 1px solid var(--border-color);
     color: var(--text-secondary);
 }
 
-.btn-secondary:hover{
+.btn-secondary:hover {
     background-color: var(--border-color);
     color: var(--text-primary);
 }
 
-footer{
+footer {
     text-align: center;
     padding: 1.5rem;
     color: var(--text-secondary);

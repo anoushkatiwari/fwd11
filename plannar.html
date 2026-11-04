@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Planner - SouthAsianPulse</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <header>
+                <a href="index.html" class="logo">SouthAsianPulse</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="announcement.html">Announcement</a>
+                    <a href="plannar.html" class="active">My plannar</a>
+                    <a href="login.html" class="btn">Login</a>
+                </nav>
+            </header>
+
+            <main class="container">
+                <section class="hero-card" style="padding: 2.5rem 1.5rem; margin-bottom: 2rem;">
+                    <h1>Study Planner Tasks</h1>
+                    <p class="tagline" style="margin-bottom: 0;">
+                        Track your daily academic assignments and coursework milestones.
+                    </p>
+                </section>
+
+                <section class="tasks-container" style="display: flex; flex-direction: column; gap: 1rem; max-width: 700px; margin: 0 auto;">
+                    
+                    <!-- Task Item 1 -->
+                    <label class="card task-card">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <input type="checkbox" class="task-checkbox">
+                            <div>
+                                <h3>Submit Web Dev project repository link</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Due: Nov 10, 2026</p>
+                            </div>
+                        </div>
+                    </label>
+
+                    <!-- Task Item 2 -->
+                    <label class="card task-card">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <input type="checkbox" class="task-checkbox" checked>
+                            <div>
+                                <h3 style="text-decoration: line-through;">Prepare slides for South Asia geopolitics presentation</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Due: Nov 12, 2026</p>
+                            </div>
+                        </div>
+                    </label>
+
+                    <!-- Task Item 3 -->
+                    <label class="card task-card">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <input type="checkbox" class="task-checkbox">
+                            <div>
+                                <h3>Complete database schema assignment</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Due: Nov 15, 2026</p>
+                            </div>
+                        </div>
+                    </label>
+
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2026 SouthAsianPulse - Fundamentals of Web Development Project.</p>
+            </footer>
+        </div>
+    </body>
+</html>
