@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SouthAsianPulse - Campus Hub</title>
+        <title>SouthAsianPulse - South Asian University Hub</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -12,54 +12,58 @@
                 <a href="index.html" class="logo">SouthAsianPulse</a>
                 <nav>
                     <a href="index.html" class="active">Home</a>
-                    <a href="announcements.html">Announcement</a>
+                    <a href="departments.html">Departments</a>
+                    <a href="announcements.html?view=all">Announcement</a>
                     <a href="planner.html">My planner</a>
-                    <a href="login.html" class="btn">Login</a>
+                    <button type="button" id="themeToggleBtn" class="theme-toggle-btn">🌙 Dark Mode</button>
                 </nav>
             </header>
 
             <main class="container">
                 <section class="hero-card">
-                    <h1>Welcome to SouthAsianPulse</h1>
+                    <h1>Welcome to <span>SouthAsianPulse</span></h1>
                     <p class="tagline">
-                        Your all-in-one campus portal connecting students and faculty through real-time updates and personal study tools.
+                        Open campus hub for South Asian University — a university established by SAARC nations at Gaushala Road, Maidan Garhi, New Delhi — featuring a dedicated departments directory, department-specific announcement pages, and a study planner checklist.
                     </p>
                     <div class="cta-group">
-                        <a href="login.html" class="btn">Access Portal</a>
-                        <a href="announcements.html" class="btn btn-secondary">View Notices</a>
+                        <a href="departments.html" class="btn">Explore Departments</a>
+                        <a href="announcements.html" class="btn btn-secondary">All Announcements</a>
+                        <a href="planner.html" class="btn btn-secondary">Open Planner</a>
                     </div>
                 </section>
 
                 <section class="features-grid">
                     <div class="card">
+                        <div class="card-icon">🏛️</div>
+                        <h3>SAU Departments &amp; Faculty</h3>
+                        <p>Browse South Asian University faculties, departments, degree programmes, and faculty highlights on the dedicated Departments page.</p>
+                    </div>
+
+                    <div class="card">
                         <div class="card-icon">📢</div>
-                        <h3>Faculty Notice Board</h3>
-                        <p>Access official updates, exam schedules, and syllabus announcements published directly by department professors.</p>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-icon">🔒</div>
-                        <h3>Campus Verified Auth</h3>
-                        <p>Login securely with your official university credentials to unlock custom role views.</p>
+                        <h3>Department Announcement Pages</h3>
+                        <p>Head to the Announcement hub and redirect straight to a specific department's own notice page with automatic priority tags for near dates.</p>
                     </div>
 
                     <div class="card">
-                        <div class="card-icon">📅</div>
-                        <h3>Interactive Study Planner</h3>
-                        <p>Organize coursework, schedule exam reminders, and track daily academic tasks efficiently.</p>
+                        <div class="card-icon">✅</div>
+                        <h3>Study Planner Checklist</h3>
+                        <p>Add academic tasks with subjects and due dates, group by status or subject, check off completed items, and delete tasks.</p>
                     </div>
 
                     <div class="card">
-                        <div class="card-icon">💬</div>
-                        <h3>Student Helpdesk & Feedback</h3>
-                        <p>Reach out directly to campus administration and request support for academic resources.</p>
+                        <div class="card-icon">🌓</div>
+                        <h3>Open Access &amp; Theme Toggle</h3>
+                        <p>Immediate access for all visitors with light and dark mode persistence across every page.</p>
                     </div>
                 </section>
             </main>
 
             <footer>
-                <p>&copy; 2026 SouthAsianPulse - Fundamentals of Web Development Project.</p>
+                <p>&copy; 2026 SouthAsianPulse - South Asian University Campus Project (Maidan Garhi, New Delhi).</p>
             </footer>
         </div>
+
+        <script src="script.js"></script>
     </body>
 </html>

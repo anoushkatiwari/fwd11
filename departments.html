@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Departments &amp; Faculty - SouthAsianPulse (SAU)</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <header>
+                <a href="index.html" class="logo">SouthAsianPulse</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="departments.html" class="active">Departments</a>
+                    <a href="announcements.html?view=all">Announcement</a>
+                    <a href="planner.html">My planner</a>
+                    <button type="button" id="themeToggleBtn" class="theme-toggle-btn">🌙 Dark Mode</button>
+                </nav>
+            </header>
+
+            <main class="container">
+                <section class="hero-card announcement-hero">
+                    <h1>SAU Faculties, Departments &amp; Latest Announcements</h1>
+                    <p class="tagline">
+                        Led under President Prof. K. K. Aggarwal at Maidan Garhi, New Delhi, South Asian University brings together academic faculties, research centers, and educators across SAARC nations. Any announcement posted on the Announcement page appears live under its department below.
+                    </p>
+                    <div class="search-box">
+                        <input type="text" id="deptSearch" placeholder="Search departments, faculties, programs, professors, or announcements...">
+                    </div>
+                </section>
+
+                <section class="dept-directory-grid" id="deptDirectoryGrid">
+                    <div class="card" data-dept-slug="computer-science-engineering">
+                        <span class="dept-badge">Faculty of Engineering &amp; Technology (FET)</span>
+                        <h3>Department of Computer Science and Engineering</h3>
+                        <p class="meta-text">Faculty: FET Computing &amp; Research Group</p>
+                        <p class="meta-text">Programmes: B.Tech CSE (AI &amp; ML, Data Science &amp; AI, Cybersecurity, Business Systems), Dual Degree B.Tech-M.Tech, M.Tech CS, MCA, MSc CS, MS Data Science &amp; AI, PhD</p>
+                        <p>Focuses on algorithms, software engineering, artificial intelligence, machine learning, quantum computing, cybersecurity, and high-performance computing.</p>
+                        <div class="dept-live-notices"></div>
+                        <a class="card-footer-link" href="department-announcements.html?dept=computer-science-engineering">Open Department Announcements →</a>
+                    </div>
+
+                    <div class="card" data-dept-slug="life-sciences-biotechnology">
+                        <span class="dept-badge">Faculty of Life Sciences &amp; Biotechnology</span>
+                        <h3>Life Sciences &amp; Biotechnology</h3>
+                        <p class="meta-text">Faculty: Prof. Ritu Gaur, Dr. Ananda Mustafiz, Dr. Yuba Raj Pokharel, Dr. Ravi Shankar Akundi</p>
+                        <p class="meta-text">Programmes: MSc Biotechnology, PhD in Life Sciences &amp; Biotechnology</p>
+                        <p>Conducts laboratory research across cancer biology, molecular medicine, neurochemistry, plant science, and biochemical therapeutics.</p>
+                        <div class="dept-live-notices"></div>
+                        <a class="card-footer-link" href="department-announcements.html?dept=life-sciences-biotechnology">Open Department Announcements →</a>
+                    </div>
+
+                    <div class="card" data-dept-slug="international-studies">
+                        <span class="dept-badge">Faculty of International Studies (FIS)</span>
+                        <h3>International Relations &amp; Public Policy</h3>
+                        <p class="meta-text">Faculty: FIS &amp; Institute of South Asian Studies Faculty</p>
+                        <p class="meta-text">Programmes: MA International Relations, PhD International Relations, Public Policy &amp; Governance</p>
+                        <p>Explores South Asian regional cooperation, global politics, diplomacy, and public policy through research and coursework.</p>
+                        <div class="dept-live-notices"></div>
+                        <a class="card-footer-link" href="department-announcements.html?dept=international-studies">Open Department Announcements →</a>
+                    </div>
+
+                    <div class="card" data-dept-slug="social-sciences">
+                        <span class="dept-badge">Faculty of Social Sciences (FSS)</span>
+                        <h3>Sociology &amp; Sustainable Development</h3>
+                        <p class="meta-text">Faculty: FSS Sociology &amp; Development Faculty</p>
+                        <p class="meta-text">Programmes: MA Sociology, PhD Sociology, Communication for Sustainable Development</p>
+                        <p>Examines South Asian social structures, contemporary issues, research methodologies, and sustainable development communication.</p>
+                        <div class="dept-live-notices"></div>
+                        <a class="card-footer-link" href="department-announcements.html?dept=social-sciences">Open Department Announcements →</a>
+                    </div>
+
+                    <div class="card" data-dept-slug="economics-management">
+                        <span class="dept-badge">Faculty of Economics &amp; Faculty of Management</span>
+                        <h3>Economics &amp; Management Studies</h3>
+                        <p class="meta-text">Faculty: Economics &amp; Management Faculty</p>
+                        <p class="meta-text">Programmes: MA Economics, PhD Economics, MBA, Executive MBA, Integrated BBA-MBA</p>
+                        <p>Combines quantitative economic analysis and South Asian development studies with strategic management and leadership.</p>
+                        <div class="dept-live-notices"></div>
+                        <a class="card-footer-link" href="department-announcements.html?dept=economics-management">Open Department Announcements →</a>
+                    </div>
+
+                    <div class="card" data-dept-slug="legal-studies">
+                        <span class="dept-badge">Faculty of Legal Studies</span>
+                        <h3>Department of Legal Studies</h3>
+                        <p class="meta-text">Faculty: Legal Studies Faculty &amp; AI/Law Programme Team</p>
+                        <p class="meta-text">Programmes: LLM (Master of Laws), PhD in Legal Studies</p>
+                        <p>Covers international law, comparative constitutional law, trade, environmental law, human rights, and emerging AI &amp; law themes.</p>
+                        <div class="dept-live-notices"></div>
+                        <a class="card-footer-link" href="department-announcements.html?dept=legal-studies">Open Department Announcements →</a>
+                    </div>
+
+                    <div class="card" data-dept-slug="sciences-mathematics-climate">
+                        <span class="dept-badge">FMS, FPS, FCS &amp; Interdisciplinary Centre on Climate Change</span>
+                        <h3>Mathematics, Physical &amp; Chemical Sciences, Climate Change</h3>
+                        <p class="meta-text">Faculty: Mathematical, Physical, Chemical &amp; Climate Faculty</p>
+                        <p class="meta-text">Programmes: B.Tech Mathematics &amp; Computing, MSc/PhD Mathematics, Physics PhD, Chemical Sciences, MS Climate Change &amp; Sustainability</p>
+                        <p>Spans numerical analysis, graph theory, plasma physics, nanotechnology, chemical sciences, and South Asian climate sustainability.</p>
+                        <div class="dept-live-notices"></div>
+                        <a class="card-footer-link" href="department-announcements.html?dept=sciences-mathematics-climate">Open Department Announcements →</a>
+                    </div>
+
+                    <div class="card" data-dept-slug="arts-design-virtual">
+                        <span class="dept-badge">Faculty of Arts and Design &amp; SAU Virtual Campus</span>
+                        <h3>Media, Arts, Design &amp; Virtual Campus</h3>
+                        <p class="meta-text">Faculty: Arts, Design &amp; Virtual Campus Educators</p>
+                        <p class="meta-text">Programmes: PhD Media, Arts &amp; Design, Communication Design &amp; Graphics, Vocal Music, Fashion Design, Online BCA (Hons)</p>
+                        <p>Connects visual communication, South Asian cultural arts, design practice, and flexible digital degree learning.</p>
+                        <div class="dept-live-notices"></div>
+                        <a class="card-footer-link" href="department-announcements.html?dept=arts-design-virtual">Open Department Announcements →</a>
+                    </div>
+                </section>
+
+                <p id="noDeptMsg" class="empty-state" style="display: none;">
+                    No departments, faculties, or professors match your search query.
+                </p>
+            </main>
+
+            <footer>
+                <p>&copy; 2026 SouthAsianPulse - South Asian University Campus Project (Maidan Garhi, New Delhi).</p>
+            </footer>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

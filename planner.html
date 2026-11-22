@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Planner - SouthAsianPulse (SAU)</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <header>
+                <a href="index.html" class="logo">SouthAsianPulse</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="departments.html">Departments</a>
+                    <a href="announcements.html?view=all">Announcement</a>
+                    <a href="planner.html" class="active">My planner</a>
+                    <button type="button" id="themeToggleBtn" class="theme-toggle-btn">🌙 Dark Mode</button>
+                </nav>
+            </header>
+
+            <main class="container">
+                <section class="hero-card planner-hero">
+                    <h1>SAU Study Planner Checklist</h1>
+                    <p class="tagline">
+                        Add academic checklist items with a subject and due date, group by status or subject, check off completed work, and delete tasks anytime.
+                    </p>
+                </section>
+
+                <section class="panel-section">
+                    <div class="card">
+                        <h3 class="section-heading">Add Checklist Task</h3>
+                        <form id="taskForm" class="task-form">
+                            <input type="text" id="taskInput" aria-label="Task Description" placeholder="e.g., Prepare lab demo &amp; project walkthrough" required>
+                            <input type="text" id="taskSubject" aria-label="Subject or Department" placeholder="e.g., CSE, IR, Economics">
+                            <input type="date" id="taskDate" aria-label="Due Date">
+                            <button type="submit" class="btn">Add to Checklist</button>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="panel-section">
+                    <div class="toolbar-row">
+                        <h3 class="section-heading no-margin">Your Task Checklist</h3>
+                        <div class="group-controls" role="group" aria-label="Group tasks">
+                            <button type="button" class="group-btn active" data-group="none">All Tasks</button>
+                            <button type="button" class="group-btn" data-group="status">Group by Status</button>
+                            <button type="button" class="group-btn" data-group="subject">Group by Subject</button>
+                        </div>
+                    </div>
+
+                    <div id="taskList" class="task-list"></div>
+
+                    <p id="emptyState" class="empty-state" style="display: none;">
+                        No tasks in your checklist yet. Add a task above to get started!
+                    </p>
+                </section>
+            </main>
+
+            <footer>
+                <p>&copy; 2026 SouthAsianPulse - South Asian University Campus Project (Maidan Garhi, New Delhi).</p>
+            </footer>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Announcements - SouthAsianPulse (SAU)</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <header>
+                <a href="index.html" class="logo">SouthAsianPulse</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="departments.html">Departments</a>
+                    <a href="announcements.html?view=all" class="active">Announcement</a>
+                    <a href="planner.html">My planner</a>
+                    <button type="button" id="themeToggleBtn" class="theme-toggle-btn">🌙 Dark Mode</button>
+                </nav>
+            </header>
+
+            <main class="container">
+                <section class="hero-card announcement-hero">
+                    <h1>SAU Announcements &amp; Department Sections</h1>
+                    <p class="tagline">
+                        Choose your department from the dropdown below to view that particular department's announcement section or open its dedicated page. Dates within 7 days automatically get a Priority tag.
+                    </p>
+
+                    <!-- Choose Department Dropdown -->
+                    <form id="deptRedirectForm" class="redirect-bar">
+                        <label for="deptRedirectSelect" class="sr-only">Choose Department</label>
+                        <select id="deptRedirectSelect" aria-label="Choose Department">
+                            <option value="all" selected>All Departments</option>
+                            <option value="computer-science-engineering">Department of Computer Science and Engineering</option>
+                            <option value="life-sciences-biotechnology">Life Sciences &amp; Biotechnology</option>
+                            <option value="international-studies">International Relations &amp; Public Policy</option>
+                            <option value="social-sciences">Sociology &amp; Sustainable Development</option>
+                            <option value="economics-management">Economics &amp; Management Studies</option>
+                            <option value="legal-studies">Department of Legal Studies</option>
+                            <option value="sciences-mathematics-climate">Mathematics, Physical &amp; Chemical Sciences, Climate Change</option>
+                            <option value="arts-design-virtual">Media, Arts, Design &amp; Virtual Campus</option>
+                        </select>
+                        <button type="submit" class="btn">Open Department Page</button>
+                        <a href="planner.html" class="btn btn-secondary">My Planner</a>
+                    </form>
+
+                    <!-- Quick Jump Pills for Each Department -->
+                    <div id="deptQuickLinks" class="dept-tabs">
+                        <a class="dept-link-pill" href="department-announcements.html?dept=computer-science-engineering">Department of Computer Science and Engineering</a>
+                        <a class="dept-link-pill" href="department-announcements.html?dept=life-sciences-biotechnology">Life Sciences &amp; Biotechnology</a>
+                        <a class="dept-link-pill" href="department-announcements.html?dept=international-studies">International Relations &amp; Public Policy</a>
+                        <a class="dept-link-pill" href="department-announcements.html?dept=social-sciences">Sociology &amp; Sustainable Development</a>
+                        <a class="dept-link-pill" href="department-announcements.html?dept=economics-management">Economics &amp; Management Studies</a>
+                        <a class="dept-link-pill" href="department-announcements.html?dept=legal-studies">Department of Legal Studies</a>
+                        <a class="dept-link-pill" href="department-announcements.html?dept=sciences-mathematics-climate">Mathematics, Physical &amp; Chemical Sciences, Climate Change</a>
+                        <a class="dept-link-pill" href="department-announcements.html?dept=arts-design-virtual">Media, Arts, Design &amp; Virtual Campus</a>
+                    </div>
+
+                    <div class="search-box">
+                        <input type="text" id="announcementSearch" placeholder="Search announcements by professor, department, date, or topic...">
+                    </div>
+                </section>
+
+                <!-- Post New Announcement into a Chosen Department -->
+                <section class="panel-section">
+                    <div class="card">
+                        <h3 class="section-heading">Post a Department Announcement</h3>
+                        <form id="announcementForm" class="announcement-form">
+                            <div class="form-row">
+                                <div class="form-group flex-grow">
+                                    <label for="noticeTitle">Announcement Title</label>
+                                    <input type="text" id="noticeTitle" placeholder="e.g., Lab Evaluation / Seminar / Workshop" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="noticeDept">Choose Department</label>
+                                    <select id="noticeDept" required>
+                                        <option value="computer-science-engineering">Department of Computer Science and Engineering</option>
+                                        <option value="life-sciences-biotechnology">Life Sciences &amp; Biotechnology</option>
+                                        <option value="international-studies">International Relations &amp; Public Policy</option>
+                                        <option value="social-sciences">Sociology &amp; Sustainable Development</option>
+                                        <option value="economics-management">Economics &amp; Management Studies</option>
+                                        <option value="legal-studies">Department of Legal Studies</option>
+                                        <option value="sciences-mathematics-climate">Mathematics, Physical &amp; Chemical Sciences, Climate Change</option>
+                                        <option value="arts-design-virtual">Media, Arts, Design &amp; Virtual Campus</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group flex-grow">
+                                    <label for="noticeFaculty">Faculty / Coordinator (Optional)</label>
+                                    <input type="text" id="noticeFaculty" placeholder="e.g., Prof. Ritu Gaur / Dept. Coordinator">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="noticeTargetDate">Event / Deadline Date</label>
+                                    <input type="date" id="noticeTargetDate">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="noticeBody">Announcement Details</label>
+                                <textarea id="noticeBody" rows="3" placeholder="Write the notice details for students and faculty..." required></textarea>
+                            </div>
+
+                            <div class="form-actions-right">
+                                <button type="submit" class="btn">Publish Announcement</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="panel-section" aria-labelledby="publishedAnnouncementsHeading">
+                    <h2 class="section-heading" id="publishedAnnouncementsHeading">Published Announcements</h2>
+                    <!-- Announcements grouped by department -->
+                    <div id="announcementSections">
+                        <!-- Rendered dynamically by script.js -->
+                    </div>
+                </section>
+
+                <p id="noAnnouncementsMsg" class="empty-state" style="display: none;">
+                    No announcements match your selected department or search query.
+                </p>
+            </main>
+
+            <footer>
+                <p>&copy; 2026 SouthAsianPulse - South Asian University Campus Project (Maidan Garhi, New Delhi).</p>
+            </footer>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

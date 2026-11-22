@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Department Announcements - SouthAsianPulse (SAU)</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <header>
+                <a href="index.html" class="logo">SouthAsianPulse</a>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="departments.html">Departments</a>
+                    <a href="announcements.html?view=all" class="active">Announcement</a>
+                    <a href="planner.html">My planner</a>
+                    <button type="button" id="themeToggleBtn" class="theme-toggle-btn">🌙 Dark Mode</button>
+                </nav>
+            </header>
+
+            <main class="container">
+                <section class="hero-card announcement-hero">
+                    <span class="dept-badge" id="singleDeptBadge">Department Portal</span>
+                    <h1 id="singleDeptTitle">Department Announcements</h1>
+                    <p class="tagline" id="singleDeptDesc">
+                        Official notices, faculty updates, and upcoming dates for this department.
+                    </p>
+                    <p class="meta-text" id="singleDeptFaculty"></p>
+
+                    <!-- Switch to Another Department's Dedicated Announcement Page -->
+                    <form id="singleDeptSwitchForm" class="redirect-bar">
+                        <label for="singleDeptSwitchSelect" class="sr-only">Switch Department Page</label>
+                        <select id="singleDeptSwitchSelect" aria-label="Switch Department Page">
+                            <option value="computer-science-engineering">Department of Computer Science and Engineering</option>
+                            <option value="life-sciences-biotechnology">Life Sciences &amp; Biotechnology</option>
+                            <option value="international-studies">International Relations &amp; Public Policy</option>
+                            <option value="social-sciences">Sociology &amp; Sustainable Development</option>
+                            <option value="economics-management">Economics &amp; Management Studies</option>
+                            <option value="legal-studies">Department of Legal Studies</option>
+                            <option value="sciences-mathematics-climate">Mathematics, Physical &amp; Chemical Sciences, Climate Change</option>
+                            <option value="arts-design-virtual">Media, Arts, Design &amp; Virtual Campus</option>
+                        </select>
+                        <button type="submit" class="btn">Switch Department</button>
+                    </form>
+
+                    <div class="cta-group">
+                        <a href="announcements.html?view=all" class="btn btn-secondary">Announcement Sections</a>
+                        <a href="departments.html" class="btn btn-secondary">All Departments</a>
+                        <a href="planner.html" class="btn btn-secondary">My Planner</a>
+                    </div>
+                </section>
+
+                <!-- Post Notice Directly to This Department -->
+                <section class="panel-section">
+                    <div class="card">
+                        <h3 class="section-heading" id="singleDeptFormHeading">Post Notice for This Department</h3>
+                        <form id="singleDeptForm" class="announcement-form">
+                            <div class="form-row">
+                                <div class="form-group flex-grow">
+                                    <label for="deptNoticeTitle">Announcement Title</label>
+                                    <input type="text" id="deptNoticeTitle" placeholder="e.g., Mid-Term Viva / Guest Lecture" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="deptNoticeDate">Event / Deadline Date</label>
+                                    <input type="date" id="deptNoticeDate">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group flex-grow">
+                                    <label for="deptNoticeFaculty">Faculty / Coordinator (Optional)</label>
+                                    <input type="text" id="deptNoticeFaculty" placeholder="e.g., Dr. Ananda Mustafiz / Department Office">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="deptNoticeBody">Announcement Details</label>
+                                <textarea id="deptNoticeBody" rows="3" placeholder="Enter details for students in this department..." required></textarea>
+                            </div>
+
+                            <div class="form-actions-right">
+                                <button type="submit" class="btn">Post to This Department</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="features-grid" id="singleDeptGrid">
+                    <!-- Rendered dynamically via script.js -->
+                </section>
+
+                <p id="singleDeptEmpty" class="empty-state" style="display: none;">
+                    No announcements posted for this department yet.
+                </p>
+            </main>
+
+            <footer>
+                <p>&copy; 2026 SouthAsianPulse - South Asian University Campus Project (Maidan Garhi, New Delhi).</p>
+            </footer>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
